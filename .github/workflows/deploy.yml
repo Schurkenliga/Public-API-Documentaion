@@ -1,5 +1,10 @@
 name: Deploy to GitHub Pages
 
+defaults:
+  run:
+    shell: bash
+    working-directory: ./schurken-docs
+    
 on:
   push:
     branches:
@@ -22,11 +27,9 @@ jobs:
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
-        working-directory: ./schurken-docs
       - name: Build website
         run: yarn build
-        working-directory: ./schurken-docs
-
+        
       - name: Upload Build Artifact
         uses: actions/upload-pages-artifact@v3
         with:
