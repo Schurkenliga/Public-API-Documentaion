@@ -15,7 +15,7 @@ const config = {
   favicon: 'img/logo.ico',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://schurkenliga.github.io/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -26,7 +26,7 @@ const config = {
   projectName: 'Public-API-Documentaion', // Usually your repo name.
   trailingSlash: false,
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
@@ -35,6 +35,11 @@ const config = {
   i18n: {
     defaultLocale: 'de',
     locales: ['de'],
+    localeConfigs: {
+      de: {
+        htmlLang: 'de-DE',
+      },
+    },
   },
 
   presets: [
